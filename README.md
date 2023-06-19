@@ -1,4 +1,4 @@
-# Create Express App
+# Express App Setup
 
 ## Description
 
@@ -18,32 +18,20 @@ Before getting started, ensure that you have the following installed:
 - Node.js (version 14.x.x or higher)
 - MongoDB 
 
-## Installation
+## Installation & Usage
 
-1. Clone the repository:
+1. Install the package:
     ```
-        git clone https://github.com/Create-Express-App/create-express-app
-    ```
-
-2. Navigate to the project directory:
-    ```
-        cd create-express-app
+        npm i -g express-app-setup
     ```
 
-3. Install the dependencies:
+2. Setup your Project using the package:
     ```
-        npm install
+        express-app-setup package-name
     ```
+    after this everything gets generated and installed, and your server loads up.
 
-## Usage
-
-1. Generate Boilerplate:
-    ```
-        npm start project-name
-    ```
-
-2. Customize Project Directory.
-
+3. Customize your Project
 
 ## Contributing
 
