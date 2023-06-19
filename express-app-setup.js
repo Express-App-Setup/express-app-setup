@@ -114,16 +114,19 @@ const createExpressApp = (projectName) => {
   console.log(green, 'Boilerplate generated successfully!');
 
   // Change to the project directory
-  const projectPath = path.join(__dirname, projectName);
-  process.chdir(projectPath);
+  setTimeout(() => {
+    const projectPath = path.join(__dirname, projectName);
+    process.chdir(projectPath);
 
-  // Run npm install
-  console.log('\x1b[34m','Installing dependencies...');
-  execSync('npm i', { stdio: 'inherit' });
-  console.log(green, 'Dependencies installed successfully!');
-  console.log(resetColor, "")
+    // Run npm install
+    console.log('\x1b[34m','Installing dependencies...');
+    execSync('npm i', { stdio: 'inherit' });
+    console.log(green, 'Dependencies installed successfully!');
+    console.log(resetColor, "")
 
-  execSync('npm start', { stdio: 'inherit' });
+    execSync('npm start', { stdio: 'inherit' });
+  }, 3000);
+  
 };
 
 // Run the script
