@@ -9,8 +9,8 @@ const projectName = process.argv[2];
 // Provide a default project name if none is specified
 const defaultProjectName = 'myApp';
 
-// Resolve the project directory path
-const projectDirectory = path.resolve(process.cwd(), projectName || defaultProjectName);
+# // Resolve the project directory path
+# const projectDirectory = path.resolve(process.cwd(), projectName || defaultProjectName);
 
 // Call the createExpressApp function with the project directory
-createExpressApp(projectDirectory);
+createExpressApp(projectName || defaultProjectName);
