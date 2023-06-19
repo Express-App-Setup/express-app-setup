@@ -1,15 +1,15 @@
 {
-  "name": "create-express-app",
+  "name": "express-app-setup",
   "version": "1.0.0",
   "description": "A package to create an express js boilerplate",
-  "main": "create-express-app.js",
+  "main": "express-app-setup.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node create-express-app"
+    "start": "node express-app-setup"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Create-Express-App/create-express-app.git"
+    "url": "git+https://github.com/Express-App-Setup/express-app-setup.git"
   },
   "keywords": [
     "Express",
@@ -19,9 +19,9 @@
   "author": "DevEmmy",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Create-Express-App/create-express-app/issues"
+    "url": "https://github.com/Express-App-Setup/express-app-setup/issues"
   },
-  "homepage": "https://github.com/Create-Express-App/create-express-app#readme",
+  "homepage": "https://github.com/Express-App-Setup/express-app-setup#readme",
   "dependencies": {
     "child_process": "^1.0.2",
     "dotenv": "^16.3.1",

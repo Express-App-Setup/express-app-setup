@@ -54,5 +54,3 @@ Contributions are welcome! If you find any issues or want to contribute new feat
 3. Make your changes.
 4. Test your changes thoroughly.
 5. Submit a pull request.
-    
-
