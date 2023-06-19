@@ -106,7 +106,7 @@ const createPackageFile = (projectName) => {
 
 // Main function
 const createExpressApp = (projectName) => {
-  createProjectDirectory(projectName);
+  // createProjectDirectory(projectName);
   createServerFile(projectName);
   createPackageFile(projectName);
   createEnvFile(projectName);
