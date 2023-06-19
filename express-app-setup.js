@@ -70,10 +70,31 @@ const gitIgnoreTemplate = `
 `
 
 // Create the project directory
+// const createProjectDirectory = (projectName) => {
+//   let projectPath = path.join(process.cwd(), projectName);
+  
+//   // Check if the directory already exists
+//   if (fs.existsSync(projectPath)) {
+//     console.error(red, `Directory '${projectName}' already exists.`);
+//     return;
+//   }
+
+//   fs.mkdirSync(projectPath);
+//   projectPath = path.join(process.cwd(), projectName);
+//   console.log(projectPath);
+//   console.log(green, 'Project directory created');
+// };
+
 const createProjectDirectory = (projectName) => {
-  fs.mkdirSync(projectName);
-  console.log(green, 'Project directory created');
+  const projectPath = path.resolve(process.cwd(), projectName);
+  if (fs.existsSync(projectPath)) {
+    console.error(red, `A directory with the name '${projectName}' already exists.`);
+    return;
+  }
+  fs.mkdirSync(projectPath);
+  console.log(green, `Project directory '${projectName}' created successfully.`);
 };
+
 
 // Create the Express server file
 const createServerFile = (projectName) => {
@@ -106,7 +127,7 @@ const createPackageFile = (projectName) => {
 
 // Main function
 const createExpressApp = (projectName) => {
-  // createProjectDirectory(projectName);
+  createProjectDirectory(projectName);
   createServerFile(projectName);
   createPackageFile(projectName);
   createEnvFile(projectName);
@@ -114,8 +135,7 @@ const createExpressApp = (projectName) => {
   console.log(green, 'Boilerplate generated successfully!');
 
   // Change to the project directory
-  setTimeout(() => {
-    const projectPath = path.join(__dirname, projectName);
+  const projectPath = path.join(process.cwd(), projectName);
     process.chdir(projectPath);
 
     // Run npm install
@@ -125,7 +145,6 @@ const createExpressApp = (projectName) => {
     console.log(resetColor, "")
 
     execSync('npm start', { stdio: 'inherit' });
-  }, 3000);
   
 };
 

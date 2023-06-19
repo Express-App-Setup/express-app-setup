@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 
 const path = require('path');
-const { createExpressApp } = require('../express-app-setup');
+const fs = require("fs")
+const { createExpressApp, } = require('../express-app-setup');
 
 // Extract the project name from the command-line arguments
 const projectName = process.argv[2];
@@ -12,5 +13,9 @@ const defaultProjectName = 'myApp';
 // Resolve the project directory path
 const projectDirectory = path.resolve(process.cwd(), projectName || defaultProjectName);
 
+if (fs.existsSync(projectDirectory)) {
+    process.exit(1);
+}
+
 // Call the createExpressApp function with the project directory
-createExpressApp(projectName);
+createExpressApp(projectDirectory);
