@@ -1,0 +1,31 @@
+{
+  "name": "create-express-app",
+  "version": "1.0.0",
+  "description": "A package to create an express js boilerplate",
+  "main": "create-express-app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node create-express-app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Create-Express-App/create-express-app.git"
+  },
+  "keywords": [
+    "Express",
+    "Boilerplate",
+    "Backend"
+  ],
+  "author": "DevEmmy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Create-Express-App/create-express-app/issues"
+  },
+  "homepage": "https://github.com/Create-Express-App/create-express-app#readme",
+  "dependencies": {
+    "child_process": "^1.0.2",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mongoose": "^7.3.0"
+  }
+}
