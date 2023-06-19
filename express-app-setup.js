@@ -133,3 +133,5 @@ if (projectName) {
 } else {
   console.error(red, 'Please provide a project name.');
 }
+
+module.exports = {createExpressApp}
