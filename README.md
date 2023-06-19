@@ -22,12 +22,12 @@ Before getting started, ensure that you have the following installed:
 
 1. Install the package:
     ```
-        npm i -g express-app-setup
+    >> npm i -g express-app-setup
     ```
 
 2. Setup your Project using the package:
     ```
-        express-app-setup package-name
+    >> express-app-setup package-name
     ```
     after this everything gets generated and installed, and your server loads up.
 
