@@ -1,6 +1,6 @@
 {
   "name": "express-app-setup",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A package to create an express js boilerplate",
   "main": "express-app-setup.js",
   "bin": {
