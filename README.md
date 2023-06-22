@@ -23,12 +23,12 @@ Before getting started, ensure that you have the following installed:
 1. Install the package:
     ```
      npm i -g express-app-setup
-    ```bash
+    ```
 
 2. Setup your Project using the package:
     ```
      express-app-setup package-name -tsc=false
-    ```bash
+    ```
     after this everything gets generated and installed, and your server loads up.
 
 3. Customize your Project
@@ -39,8 +39,9 @@ The following options are available when running `express-app-setup`:
 
 - `-tsc=true`: Generate a TypeScript boilerplate project. This option initializes the project with TypeScript support and includes a `tsconfig.json` file. Example usage:
 
-  ```bash
-  express-app-setup myApp -tsc=true
+  ```
+   express-app-setup myApp -tsc=true
+  ```
 
 ## Contributing
 
