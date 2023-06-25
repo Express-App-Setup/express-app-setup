@@ -27,13 +27,13 @@ Before getting started, ensure that you have the following installed:
 
 2. Setup your Project using the package:
     ```
-     express-app-setup package-name -tsc=false
+     express-app-setup package-name
     ```
     after this everything gets generated and installed, and your server loads up.
 
 3. Customize your Project
 
-## Options
+<!-- ## Options
 
 The following options are available when running `express-app-setup`:
 
@@ -41,7 +41,7 @@ The following options are available when running `express-app-setup`:
 
   ```
    express-app-setup myApp -tsc=true
-  ```
+  ``` -->
 
 ## Contributing
 

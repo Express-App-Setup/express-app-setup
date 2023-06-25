@@ -11,11 +11,21 @@ const projectName = process.argv[2];
 const defaultProjectName = 'myApp';
 
 // Resolve the project directory path
-const projectDirectory = path.resolve(process.cwd(), projectName || defaultProjectName);
+const projectDirectory = path.resolve(process.cwd(), projectName);
 
 if (fs.existsSync(projectDirectory)) {
+    console.log('\x1b[31m',"This Project Directory Exists")
+    console.log('\x1b[0m', "")
     process.exit(1);
 }
 
 // Call the createExpressApp function with the project directory
-createExpressApp(projectDirectory);
+const args = process.argv.slice(2);
+const useTypeScript = args.includes('-tsc=true');
+
+if (projectName) {
+  createExpressApp(projectName, useTypeScript);
+} else {
+  console.error(red, 'Please provide a project name.');
+  console.log('\x1b[0m', "")
+}
