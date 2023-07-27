@@ -18,9 +18,8 @@ class JavascriptCreator extends BaseCreator{
         `const express = require('express');
 const mongoose = require('mongoose')
 const cors = require('cors')
-const corsOptions = require('./src/config/cors');
-const bodyParser = require('./src/config/body-parser');`;
-const app = 'express()';
+const corsOptions = require('./src/config/cors');`;
+const app = "express()";
 const port = `process.env.PORT || 3030`;
       
         return `${imports}
@@ -136,7 +135,7 @@ module.exports = bodyParser
 
         // Install dependencies
         console.log('\x1b[34m','Installing dependencies...');
-        execSync('npm i express mongoose dotenv cors body-parser open', { stdio: 'inherit' });
+        execSync('npm i express mongoose dotenv cors open', { stdio: 'inherit' });
             
         console.log(green, 'Dependencies installed successfully!');
         console.log(resetColor, "")
@@ -146,6 +145,7 @@ module.exports = bodyParser
     }
 }
 
-const js = new JavascriptCreator(extension = "js", package="neewpp")
-js.init()
+// const js = new JavascriptCreator(extension = "js", package="neewpp")
+// js.init()
+module.exports = JavascriptCreator
 
